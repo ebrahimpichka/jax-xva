@@ -75,7 +75,7 @@ class XVAEngine:
             elif isinstance(trade, OptionTradeData):
                 # Implementation for option exposure simulation would go here
                 # TODO: implement option exposure simulation
-                pass
+                raise NotImplementedError("Option exposure simulation not implemented (yet)")
             else:
                 raise ValueError(f"Unsupported trade type: {type(trade)}")
             
@@ -164,7 +164,7 @@ class XVAEngine:
                 total_ee = data['ee']
                 times = data['times']
             else:
-                # In practice, this requires time interpolation
+                # In practice, this requires time interpolation # TODO: implement time interpolation
                 total_ee += data['ee']
         
         # Calculate negative exposures (for DVA)
