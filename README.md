@@ -125,61 +125,8 @@ print(f"Total XVA: ${xva_results['TotalXVA']:.2f}")
 
 ## Performance
 
-The JAX XVA library significantly outperforms traditional implementations:
+TODO: Benchmark against numpy and c++
 
-- 10-50x speedup for exposure simulation compared to NumPy
-- Efficient GPU/TPU utilization for large portfolios
-- Scalable to millions of simulation paths
-- Fast risk sensitivity calculations using auto-differentiation
-
-## Advanced Usage
-
-### Custom Trade Types
-
-Extend the library with custom trade types by inheriting from `TradeData`:
-
-```python
-@dataclass
-class CustomOptionTradeData(TradeData):
-    strike: float
-    underlying: str
-    is_call: bool
-    barrier_level: Optional[float] = None
-```
-
-### Custom Market Models
-
-Implement custom market models by defining a class with a `simulate_paths` method:
-
-```python
-class CustomModel:
-    def __init__(self, param1, param2):
-        self.param1 = param1
-        self.param2 = param2
-    
-    @partial(jit, static_argnums=(0,))
-    def simulate_paths(self, key, initial_value, times, n_paths):
-        # Simulation logic here
-        return paths
-```
-
-### Using GPU Acceleration
-
-Enable GPU acceleration (if available) with:
-
-```python
-jax.config.update('jax_platform_name', 'gpu')
-```
-
-## Requirements
-
-- JAX >= 0.5.3
-- NumPy >= 2.2.4
-- Matplotlib >= 3.10.1 (for visualization)
-
-## License
-
-MIT License
 
 ## Citation
 
