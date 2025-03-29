@@ -49,11 +49,11 @@ This library provides efficient implementations of various XVA components using 
 - **Sensitivity Analysis**: Calculation of risk sensitivities using auto-differentiation
 - **Stress Testing**: Framework for running stress scenarios
 
-## Installation
+<!-- ## Installation
 
 ```bash
 pip install jax-xva
-```
+``` -->
 
 ## Quick Start
 
@@ -62,7 +62,7 @@ import jax
 import jax.numpy as jnp
 from jax import random
 
-from jax_xva_library import (
+from jax_xva import (
     MarketData, SwapTradeData, SimulationConfig,
     HullWhiteModel, XVAEngine, create_sample_market_data
 )
