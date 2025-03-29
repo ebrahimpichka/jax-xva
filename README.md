@@ -1,3 +1,5 @@
+![JAX XVA Logo](./images/JAX-XVA-FullLogo.png)
+
 # JAX XVA Library
 
 A high-performance library for XVA (Valuation Adjustments) calculations using JAX.
